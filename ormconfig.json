@@ -1,6 +1,7 @@
-{"type": "mongodb",
+{
+  "type": "mongodb",
   "host": "localhost",
-  "database": "test",
+  "database": "leaveapp",
   "synchronize": true,
   "logging": false
 }
