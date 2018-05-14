@@ -1,6 +1,5 @@
 import { LeaveDataService } from "./leaveDataService";
 import {Leave} from "../models/leave";
-import { getConnection } from "typeorm";
 
 // leave configuration
 export class LeaveService {

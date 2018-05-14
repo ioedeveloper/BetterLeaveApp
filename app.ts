@@ -5,7 +5,30 @@ import * as apiCtrl from "./controllers/apiController";
 import { apiRoutes } from "./routes/api";
 import {createConnection, Connection} from "typeorm";
 
-createConnection().then(async connection (connection) => {
+// create app db connection.
+createConnection().then(async connection => {
+  console.log("Database Connection Established...");
 
+  // create a new express application instance
+const app: express.Application = express();
+// the port the express app will listen on
+const port:any = process.env.PORT || 8001;
+// view engine setup
+app.set("views", path.join(__dirname, "public"));
+app.set("view engine", "pug");
+
+// uncomment after placing your favicon in /public
+// app.use(favicon(__dirname + '/public/favicon.ico'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/api", apiRoutes.router);
+
+// serve the application at the given port
+app.listen(port, () => {
+    // success callback
+    console.log(`Listening at http://localhost:${port}/`);
 });
-// create app db connection
+
+}).catch(error => console.log("Data Access Error : ", error));
