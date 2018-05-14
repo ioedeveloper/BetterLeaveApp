@@ -1,19 +1,27 @@
-/**
- * LeaveController that will respond to all requests for leave for any staff
- */
-
-import  express = require("express");
-import { Request, Response } from "express";
+"use strict";
+import { NextFunction, Request, Response } from "express";
 import { LeaveDataService } from "../services/leaveDataService";
 import { LeaveIndexApiModel } from "../api_models/leaveIndexApiModel";
 import { Leave } from "../models/leave";
 
+/**
+ * GET /api
+ * List of API examples.
+ */
+export let getApi:any = (req: Request, res: Response) => {
+  res.render("api/index", {
+    title: "BETTER LEAVE APP API",
+  });
+};
 
 
-const dataService: LeaveDataService = new LeaveDataService();
-//
-
-export let index:any = async (req: Request, res: Response) => {
+/**
+ * Get All Leaves
+ * @param req
+ * @param res
+ */
+export let getAllLeaves:any = async (req: Request, res: Response) => {
+    const dataService: LeaveDataService = new LeaveDataService();
     let result:Array<Leave> = await dataService.getAllLeaves();
     let viewresult:Array<LeaveIndexApiModel> = new Array<LeaveIndexApiModel>();
 

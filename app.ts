@@ -1,9 +1,9 @@
 import express = require("express");
 import bodyParser = require("body-parser");
 import path = require("path");
-import * as home from "./controllers/home";
-import * as leavectrl from "./controllers/leaveController";
+import * as apiCtrl from "./controllers/api";
 import { Router } from "express-serve-static-core";
+import { apiRouter } from "./routes/api";
 import {} from "";
 // create express server
 
@@ -25,12 +25,8 @@ class App {
     private middleware(): void {
       this.express.set("port", process.env.PORT || 3000);
       this.express.set("views", path.join(__dirname, "../views"));
-      this.express.set("view engine", "pug");
-      this.express.use(compression());
-      this.express.use(logger("dev"));
       this.express.use(bodyParser.json());
       this.express.use(bodyParser.urlencoded({ extended: true }));
-      this.express.use(expressValidator());
       this.express.use(session({
         resave: true,
         saveUninitialized: true,
@@ -40,17 +36,12 @@ class App {
           url: process.env.MONGODB_URI || process.env.MONGOLAB_URI,
         }),
       }));
-      this.express.use(passport.initialize());
-      this.express.use(passport.session());
-      this.express.use(flash());
-      this.express.use(lusca.xframe("SAMEORIGIN"));
-      this.express.use(lusca.xssProtection(true));
       this.express.use((req, res, next) => {
         res.locals.user = req.user;
         next();
       });
       this.express.use((req, res, next) => {
-        // After successful login, redirect back to the intended page
+        // after successful login, redirect back to the intended page
         if (!req.user &&
           req.path !== "/login" &&
           req.path !== "/signup" &&
@@ -69,7 +60,7 @@ class App {
      * Primary app routes.
      */
     private routes(): void {
-      this.express.use("/", rootRouter);
+      this.express.use("/", routes);
     }
 
     private launchConf() {
