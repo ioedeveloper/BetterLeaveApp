@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response, Router } from "express";
 
-import * as apiController from "../controllers/api";
+import * as apiController from "../controllers/apiController";
 
 class Api {
   public router: Router;
@@ -14,4 +14,4 @@ class Api {
 }
 
 const apiRoutes:Api = new Api();
-export default apiRoutes.router;
+export {apiRoutes};
