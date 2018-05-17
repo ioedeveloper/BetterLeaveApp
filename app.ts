@@ -11,18 +11,12 @@ createConnection().then(async connection => {
 
   // create a new express application instance
 const app: express.Application = express();
+
 // the port the express app will listen on
 const port:any = process.env.PORT || 8001;
-// view engine setup
-app.set("views", path.join(__dirname, "public"));
-app.set("view engine", "pug");
-
-// uncomment after placing your favicon in /public
-// app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", apiRoutes.router);
 
 // serve the application at the given port

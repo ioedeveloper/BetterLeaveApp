@@ -9,9 +9,10 @@ import { Leave } from "../models/leave";
  * List of API examples.
  */
 export let getApi:any = (req: Request, res: Response) => {
-  res.render("api/index", {
+  res.send({
     title: "BETTER LEAVE APP API",
   });
+  return;
 };
 
 
