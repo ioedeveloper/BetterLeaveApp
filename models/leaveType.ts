@@ -1,5 +1,7 @@
+// importing libraries and dependencies
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
+// leave Entity
 @Entity()
 export class LeaveType {
     @PrimaryGeneratedColumn()
