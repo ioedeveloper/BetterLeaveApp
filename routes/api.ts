@@ -1,7 +1,10 @@
+// importing libraries and dependencies
 import { NextFunction, Request, Response, Router } from "express";
-
 import * as apiController from "../controllers/apiController";
 
+/**
+ * Handles routing of api request
+ */
 class Api {
   public router: Router;
   public constructor() {

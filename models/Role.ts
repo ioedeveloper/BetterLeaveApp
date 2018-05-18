@@ -1,5 +1,7 @@
+// importing libraries and dependencies
 import { Entity, PrimaryGeneratedColumn, Index, Column } from "typeorm";
 
+// role Entity
 @Entity()
 export class Role {
     @PrimaryGeneratedColumn()

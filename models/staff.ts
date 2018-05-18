@@ -1,8 +1,10 @@
+// importing libraries and dependencies
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Index, OneToOne, JoinColumn, OneToMany } from "typeorm";
 import { Organization } from "./organization";
 import { Role } from "./Role";
 import { Leave } from "./leave";
 
+// staff Entity
 @Entity()
 export class Staff {
     @PrimaryGeneratedColumn()
