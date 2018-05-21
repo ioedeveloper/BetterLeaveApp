@@ -1,7 +1,12 @@
+/**
+ * Importing libraries and dependencies
+ */
 import { LeaveDataService } from "./leaveDataService";
 import {Leave} from "../models/leave";
 
-// leave configuration
+/**
+ * Handles all leave operations
+ */
 export class LeaveService {
     private _data: LeaveDataService;
 

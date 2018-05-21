@@ -1,7 +1,11 @@
+// importing libraries and dependencies
 import { Entity, PrimaryGeneratedColumn, Index, ManyToOne, Column, OneToOne } from "typeorm";
 import { Staff } from "../models/staff";
 import { LeaveType } from "../models/leaveType";
 
+/**
+ * Leave Entity
+ */
 @Entity()
 export class Leave {
     @PrimaryGeneratedColumn()

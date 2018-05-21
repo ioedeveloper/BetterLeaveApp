@@ -1,4 +1,4 @@
-"use strict";
+// importing libraries and dependencies
 import { NextFunction, Request, Response } from "express";
 import { LeaveDataService } from "../services/leaveDataService";
 import { LeaveIndexApiModel } from "../api_models/leaveIndexApiModel";

@@ -1,7 +1,11 @@
+// importing libraries and dependencies
 import { Leave } from "../models/leave";
 import {Staff} from "../models/staff";
 import { Repository, getRepository, Connection, getConnection } from "typeorm";
 
+/**
+ * Handles a leave data access operations
+ */
 export class LeaveDataService {
     private _db: Repository<Leave>;
 
