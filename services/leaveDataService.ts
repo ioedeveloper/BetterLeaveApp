@@ -70,9 +70,9 @@ export class LeaveDataService {
      * Disapprove leave of staff
      * @param leave
      */
-    public async updateLeaveApproval(leave: Leave): Promise<boolean> {
-        let leave: Promise<Leave> = this._db.findOneById({
-            select:[]
-        });
-    }
+    // public async updateLeaveApproval(leave: Leave): Promise<boolean> {
+    //     let leave: Promise<Leave> = this._db.findOneById({
+    //         select:[]
+    //     });
+    // }
 }

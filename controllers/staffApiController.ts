@@ -1,6 +1,6 @@
 // importing libraries and dependencies
 import { NextFunction, Request, Response } from "express";
-import { StaffDataService } from "../services/staffDataService";
+import { StaffService } from "../services/staffService";
 import { StaffViewModel } from "../view_models/staffViewModel";
 import { Staff } from "../models/staff";
 
@@ -11,5 +11,6 @@ import { Staff } from "../models/staff";
  */
  export let staffSignUp:any = async (req: Request, res: Response) => {
    let newStaff:StaffViewModel = new StaffViewModel(req.body.fname, req.body.lname, req.body.mname, req.body.role, req.body.staffId);
-
+   let staffService:StaffService = new StaffService();
+   staffService.addNewStaff(newStaff);
 };
