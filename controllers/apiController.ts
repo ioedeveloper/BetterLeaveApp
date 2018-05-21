@@ -31,7 +31,5 @@ export let getAllLeaves:any = async (req: Request, res: Response) => {
         new LeaveIndexApiModel(leave.leaveType.name, `${leave.staff.firstname} ${leave.staff.lastname}`, leave.id);
         viewresult.push(apmodel);
     });
-
-
     return res.status(200).send(viewresult);
 };
