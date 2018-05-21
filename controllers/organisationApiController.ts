@@ -1,7 +1,7 @@
 // importing libraries and dependencies
 import { NextFunction, Request, Response } from "express";
 import { LeaveDataService } from "../services/leaveDataService";
-import { OrganisationApiModel } from "../api_models/OrganisationApiModel";
+import { OrganisationViewModel } from "../view_models/organizationViewModel";
 import { Organization } from "../models/organization";
 
 /**

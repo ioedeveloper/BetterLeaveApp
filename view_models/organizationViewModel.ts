@@ -5,7 +5,7 @@ import { Staff } from "../models/staff";
 /**
  * Handles the shape of the organisation api
  */
-export class OrganisationApiModel {
+export class OrganisationViewModel {
     constructor(public organizationName: string, public organizationAddress: string, public organizationDescription?: string) {
 
     }

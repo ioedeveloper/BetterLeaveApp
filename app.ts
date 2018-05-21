@@ -2,7 +2,7 @@
 import express = require("express");
 import bodyParser = require("body-parser");
 import path = require("path");
-import { apiRoutes } from "./routes/leaveApi";
+import * as apiRoutes from "./routes/api";
 import {createConnection, Connection} from "typeorm";
 
 // create app db connection.
@@ -17,7 +17,7 @@ const port:any = process.env.PORT || 8001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/api", apiRoutes.router);
+app.use("/api", apiRoutes.leaveApiRoutes.router);
 
 // serve the application at the given port
 app.listen(port, () => {
