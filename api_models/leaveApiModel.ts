@@ -1,9 +1,9 @@
 // importing libraries and dependencies
 
 /**
- * Handles the shape of the index api being returned
+ * Handles the shape of the Leave api
  */
-export class LeaveIndexApiModel {
+export class LeaveApiModel {
     constructor(public leaveTypeName: string, public staffname: string, public leaveid: number) {
 
     }

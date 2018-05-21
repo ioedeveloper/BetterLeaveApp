@@ -1,20 +1,8 @@
 // importing libraries and dependencies
 import { NextFunction, Request, Response } from "express";
 import { LeaveDataService } from "../services/leaveDataService";
-import { LeaveIndexApiModel } from "../api_models/leaveIndexApiModel";
+import { LeaveApiModel } from "../api_models/leaveApiModel";
 import { Leave } from "../models/leave";
-
-/**
- * GET /api
- * List of API examples.
- */
-export let getApi:any = (req: Request, res: Response) => {
-  res.send({
-    title: "BETTER LEAVE APP API",
-  });
-  return;
-};
-
 
 /**
  * Get All Leaves
@@ -24,11 +12,11 @@ export let getApi:any = (req: Request, res: Response) => {
 export let getAllLeaves:any = async (req: Request, res: Response) => {
     const dataService: LeaveDataService = new LeaveDataService();
     let result:Array<Leave> = await dataService.getAllLeaves();
-    let viewresult:Array<LeaveIndexApiModel> = new Array<LeaveIndexApiModel>();
+    let viewresult:Array<LeaveApiModel> = new Array<LeaveApiModel>();
 
     result.forEach(leave => {
-        let apmodel:LeaveIndexApiModel =
-        new LeaveIndexApiModel(leave.leaveType.name, `${leave.staff.firstname} ${leave.staff.lastname}`, leave.id);
+        let apmodel:LeaveApiModel =
+        new LeaveApiModel(leave.leaveType.name, `${leave.staff.firstname} ${leave.staff.lastname}`, leave.id);
         viewresult.push(apmodel);
     });
 

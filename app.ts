@@ -2,8 +2,7 @@
 import express = require("express");
 import bodyParser = require("body-parser");
 import path = require("path");
-import * as apiCtrl from "./controllers/apiController";
-import { apiRoutes } from "./routes/api";
+import { apiRoutes } from "./routes/leaveApi";
 import {createConnection, Connection} from "typeorm";
 
 // create app db connection.
