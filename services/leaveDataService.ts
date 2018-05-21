@@ -63,4 +63,16 @@ export class LeaveDataService {
         });
         return leaves;
     }
+
+    // what happens when a leave gets disapproved? it should be deleted.
+    // it means leave gets updated either way to be approved or disapproved.
+    /**
+     * Disapprove leave of staff
+     * @param leave
+     */
+    public async updateLeaveApproval(leave: Leave): Promise<boolean> {
+        let leave: Promise<Leave> = this._db.findOneById({
+            select:[]
+        });
+    }
 }
