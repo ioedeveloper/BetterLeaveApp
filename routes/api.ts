@@ -1,20 +1,34 @@
 // importing libraries and dependencies
 import { NextFunction, Request, Response, Router } from "express";
-import * as apiController from "../controllers/apiController";
+import * as leaveApiController from "../controllers/leaveApiController";
 
 /**
- * Handles routing of api request
+ * Handles routing of leave api request
  */
-class Api {
+class LeaveApi {
   public router: Router;
   public constructor() {
     this.router = Router();
     this.init();
   }
   private init():void {
-    this.router.get("/", apiController.getApi);
+    this.router.get("/allLeaves", leaveApiController.getAllLeaves);
   }
 }
 
-const apiRoutes:Api = new Api();
-export {apiRoutes};
+/**
+ * Handles routing of staff api request
+ */
+class StaffApi {
+  public router:Router;
+  public constructor() {
+    this.router = Router();
+    this.init();
+  }
+  private init():void {
+    this.router.post("/staffSignUp", );
+  }
+}
+
+const leaveApiRoutes:LeaveApi = new LeaveApi();
+export {leaveApiRoutes};

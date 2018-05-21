@@ -1,6 +1,4 @@
-/**
- * Importing libraries and dependencies
- */
+// importing libraries and dependencies
 import { LeaveDataService } from "./leaveDataService";
 import {Leave} from "../models/leave";
 
