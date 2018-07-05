@@ -19,7 +19,7 @@ class LeaveApi {
 /**
  * Handles routing of staff api request
  */
-class StaffApi {
+class UserApi {
   public router:Router;
   public constructor() {
     this.router = Router();
@@ -31,4 +31,5 @@ class StaffApi {
 }
 
 const leaveApiRoutes:LeaveApi = new LeaveApi();
-export {leaveApiRoutes};
+const userApiRoutes:UserApi = new UserApi();
+export {leaveApiRoutes, userApiRoutes};
