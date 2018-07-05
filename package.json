@@ -4,7 +4,9 @@
   "description": "A Leave Management Application using Typescript, Angular, MongoDB and Node",
   "main": ".dist/app.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./tests/*.ts"
+    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./tests/*.ts",
+    "start": "node dist/app.js",
+    "postinstall": "npm run typings && npm run compile"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,6 @@
     "@types/morgan": "^1.7.35",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
     "morgan": "^1.9.0",
     "reflect-metadata": "^0.1.12",
     "tslint": "^5.9.1",
@@ -45,5 +46,9 @@
     "chai": "^4.1.2",
     "mocha": "^5.1.1",
     "ts-node": "^6.0.0"
+  },
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.0"
   }
 }
