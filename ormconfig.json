@@ -4,7 +4,7 @@
   "database": "leaveapp",
   "port": 3306,
   "username": "officeadmin",
-  "password": "officepass",
+  "password": "officepass1",
   "synchronize": true,
   "logging": false
 }
