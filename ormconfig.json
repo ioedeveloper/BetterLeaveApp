@@ -1,8 +1,8 @@
 {
   "type": "mongodb",
-  "host": "ds018168.mlab.com:18168",
+  "host": "ds018168.mlab.com",
   "database": "leaveapp",
-  "port": 3306,
+  "port": 18168,
   "username": "admin",
   "password": "officepass1",
   "synchronize": true,
