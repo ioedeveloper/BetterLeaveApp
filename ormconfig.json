@@ -1,8 +1,8 @@
 {
-  "type": "postgresql",
+  "type": "mongodb",
   "host": "localhost",
   "port": 5432,
-  "database": "bleaveappdb",
+  "database": "leaveapp",
   "user Id": "postgres",
   "password": "testpassword",
   "synchronize": true,
