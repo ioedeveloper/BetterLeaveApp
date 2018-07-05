@@ -3,8 +3,8 @@
   "host": "localhost",
   "database": "leaveapp",
   "port": 3306,
-  "username": "officeadmin",
-  "password": "officepass1",
+  "username": "",
+  "password": "",
   "synchronize": true,
   "logging": false
 }
