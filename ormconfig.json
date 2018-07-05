@@ -1,9 +1,10 @@
 {
   "type": "mongodb",
   "host": "localhost",
-  "port": 5432,
   "database": "leaveapp",
-  "password": "testpassword",
+  "port": 3306,
+  "username": "officeadmin",
+  "password": "officepass",
   "synchronize": true,
   "logging": false
 }
