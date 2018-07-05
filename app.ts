@@ -17,7 +17,8 @@ const port:any = process.env.PORT || 8001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/api", apiRoutes.leaveApiRoutes.router);
+app.use("/api/leave", apiRoutes.leaveApiRoutes.router);
+app.use("/api/user", apiRoutes.userApiRoutes.router);
 
 // serve the application at the given port
 app.listen(port, () => {
