@@ -5,8 +5,7 @@
   "main": ".dist/app.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./tests/*.ts",
-    "start": "node dist/app.js",
-    "postinstall": "npm run typings && npm run compile"
+    "start": "node dist/app.js"
   },
   "repository": {
     "type": "git",
