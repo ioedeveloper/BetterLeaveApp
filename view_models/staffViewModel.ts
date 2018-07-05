@@ -7,7 +7,7 @@ import { Staff } from "../models/staff";
  */
 export class StaffViewModel {
     // tslint:disable-next-line:max-line-length
-    constructor(public firstname: string, public lastname: string, public middlename:string, public role:string, public staffIdNumber:string) {
+    constructor(public firstname: string, public lastname: string, public middlename:string, public staffIdNumber:string, public birthdate:Date) {
 
     }
 }

@@ -1,7 +1,6 @@
 // importing libraries and dependencies
 import {Staff} from "../models/staff";
 import { Repository, getRepository, Connection, getConnection } from "typeorm";
-import { StaffViewModel } from "../view_models/staffViewModel";
 import { Role } from "../models/Role";
 
 /**
@@ -16,19 +15,11 @@ export class StaffDataService {
     }
 
     /**
-     * addNewStaff
+     * saveNewStaff
      */
-    public addNewStaff(staffData: StaffViewModel): Staff {
-        let staff: Staff = new Staff();
+    public async saveNewStaff(staff:Staff): Promise<Staff> {
 
-        staff.firstname = staffData.firstname;
-        staff.lastname = staffData.lastname;
-        staff.middlename = staffData.middlename;
-        let role: Role = new Role();
-        role.roleName = "HR";
-        staff.role = role;
-
-        const newstaff: Staff = this._db.create(staff);
+        const newstaff: Staff = await this._db.create(staff);
 
         return newstaff;
     }
