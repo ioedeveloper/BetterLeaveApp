@@ -1,4 +1,7 @@
 node_modules
+ormconfig.json
+.ormconfig.json
+.package.json
 
 ### Node ###
 # Logs
@@ -59,6 +62,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# ormconfig for localhost
-ormconfig
