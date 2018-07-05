@@ -26,13 +26,15 @@
     "@types/cors": "^2.8.4",
     "@types/morgan": "^1.7.35",
     "body-parser": "^1.18.2",
+    "compile": "0.0.2",
     "cors": "^2.8.4",
     "morgan": "^1.9.0",
+    "pg": "^7.4.3",
     "reflect-metadata": "^0.1.12",
     "tslint": "^5.9.1",
-    "pg": "^7.4.3",
     "typeorm": "^0.1.21",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "typings": "^2.1.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.8",
