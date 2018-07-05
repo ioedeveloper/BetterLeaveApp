@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// importing libraries and dependencies
+/**
+ * Handles the shape of the organisation api
+ */
+var OrganisationApiModel = /** @class */ (function () {
+    function OrganisationApiModel(organizationName, organizationAddress, organizationDescription) {
+        this.organizationName = organizationName;
+        this.organizationAddress = organizationAddress;
+        this.organizationDescription = organizationDescription;
+    }
+    return OrganisationApiModel;
+}());
+exports.OrganisationApiModel = OrganisationApiModel;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib3JnYW5pc2F0aW9uQXBpTW9kZWwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9hcGlfbW9kZWxzL29yZ2FuaXNhdGlvbkFwaU1vZGVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsdUNBQXVDO0FBRXZDOztHQUVHO0FBQ0g7SUFDSSw4QkFBbUIsZ0JBQXdCLEVBQVMsbUJBQTJCLEVBQVMsdUJBQWdDO1FBQXJHLHFCQUFnQixHQUFoQixnQkFBZ0IsQ0FBUTtRQUFTLHdCQUFtQixHQUFuQixtQkFBbUIsQ0FBUTtRQUFTLDRCQUF1QixHQUF2Qix1QkFBdUIsQ0FBUztJQUV4SCxDQUFDO0lBQ0wsMkJBQUM7QUFBRCxDQUFDLEFBSkQsSUFJQztBQUpZLG9EQUFvQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFN0YWZmIH0gZnJvbSBcIi4uL21vZGVscy9zdGFmZlwiO1xyXG5cclxuLy8gaW1wb3J0aW5nIGxpYnJhcmllcyBhbmQgZGVwZW5kZW5jaWVzXHJcblxyXG4vKipcclxuICogSGFuZGxlcyB0aGUgc2hhcGUgb2YgdGhlIG9yZ2FuaXNhdGlvbiBhcGlcclxuICovXHJcbmV4cG9ydCBjbGFzcyBPcmdhbmlzYXRpb25BcGlNb2RlbCB7XHJcbiAgICBjb25zdHJ1Y3RvcihwdWJsaWMgb3JnYW5pemF0aW9uTmFtZTogc3RyaW5nLCBwdWJsaWMgb3JnYW5pemF0aW9uQWRkcmVzczogc3RyaW5nLCBwdWJsaWMgb3JnYW5pemF0aW9uRGVzY3JpcHRpb24/OiBzdHJpbmcpIHtcclxuXHJcbiAgICB9XHJcbn0iXX0=
