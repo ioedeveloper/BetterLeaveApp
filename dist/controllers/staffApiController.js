@@ -48,11 +48,8 @@ exports.signup = function (req, res) { return __awaiter(_this, void 0, void 0, f
     return __generator(this, function (_a) {
         newStaff = new staffViewModel_1.StaffViewModel(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
         staffService = new staffService_1.StaffService();
-        staffService.addNewStaff(newStaff).then(function () {
-            var response = {
-                message: "Staff Created Successfully!"
-            };
-            res.status(200).send(response);
+        staffService.addNewStaff(newStaff).then(function (Staff) {
+            res.status(200).send(Staff);
         }).catch(function (error) {
             console.log("Error: " + error);
         });

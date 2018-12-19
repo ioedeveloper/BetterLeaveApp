@@ -50,13 +50,13 @@ var StaffDataService = /** @class */ (function () {
      */
     StaffDataService.prototype.saveNewStaff = function (staff) {
         return __awaiter(this, void 0, void 0, function () {
-            var staff;
+            var newStaff;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this._db.save(staff)];
                     case 1:
-                        staff = _a.sent();
-                        return [2 /*return*/, staff];
+                        newStaff = _a.sent();
+                        return [2 /*return*/, newStaff];
                 }
             });
         });

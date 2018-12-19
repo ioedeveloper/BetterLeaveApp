@@ -13,11 +13,8 @@ import { response } from "../types/api";
    let newStaff:StaffViewModel = new StaffViewModel(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
    let staffService:StaffService = new StaffService();
 
-   staffService.addNewStaff(newStaff).then(() => {
-     let response:response = {
-        message:"Staff Created Successfully!"
-     };
-      res.status(200).send(response);
+   staffService.addNewStaff(newStaff).then((Staff) => {
+      res.status(200).send(Staff);
    }).catch((error) => {
      console.log("Error: " + error);
    });

@@ -15,7 +15,7 @@ export class StaffDataService {
      * saveNewStaff
      */
     public async saveNewStaff(staff:Staff): Promise<Staff> {
-        let staff:Staff = await this._db.save(staff);
-        return staff;
+        let newStaff:Staff = await this._db.save(staff);
+        return newStaff;
     }
 }
