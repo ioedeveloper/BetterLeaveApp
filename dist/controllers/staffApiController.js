@@ -43,14 +43,20 @@ var staffViewModel_1 = require("../view_models/staffViewModel");
  * @param req
  * @param res
  */
-exports.staffSignUp = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+exports.signup = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     var newStaff, staffService;
     return __generator(this, function (_a) {
-        console.log("New User");
-        newStaff = new staffViewModel_1.StaffViewModel(req.body.fname, req.body.lname, req.body.mname, req.body.role, req.body.staffId);
+        newStaff = new staffViewModel_1.StaffViewModel(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
         staffService = new staffService_1.StaffService();
-        staffService.addNewStaff(newStaff);
+        staffService.addNewStaff(newStaff).then(function () {
+            var response = {
+                message: "Staff Created Successfully!"
+            };
+            res.status(200).send(response);
+        }).catch(function (error) {
+            console.log("Error: " + error);
+        });
         return [2 /*return*/];
     });
 }); };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RhZmZBcGlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vY29udHJvbGxlcnMvc3RhZmZBcGlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUNBLGlCQWVBOztBQWRBLHlEQUF3RDtBQUN4RCxnRUFBK0Q7QUFFL0Q7Ozs7R0FJRztBQUNTLFFBQUEsV0FBVyxHQUFPLFVBQU8sR0FBWSxFQUFFLEdBQWE7OztRQUM3RCxPQUFPLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1FBQ3BCLFFBQVEsR0FBa0IsSUFBSSwrQkFBYyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7UUFDOUgsWUFBWSxHQUFnQixJQUFJLDJCQUFZLEVBQUUsQ0FBQztRQUNuRCxZQUFZLENBQUMsV0FBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDOzs7S0FDckMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGltcG9ydGluZyBsaWJyYXJpZXMgYW5kIGRlcGVuZGVuY2llc1xyXG5pbXBvcnQgeyBSZXF1ZXN0LCBSZXNwb25zZSB9IGZyb20gXCJleHByZXNzXCI7XHJcbmltcG9ydCB7IFN0YWZmU2VydmljZSB9IGZyb20gXCIuLi9zZXJ2aWNlcy9zdGFmZlNlcnZpY2VcIjtcclxuaW1wb3J0IHsgU3RhZmZWaWV3TW9kZWwgfSBmcm9tIFwiLi4vdmlld19tb2RlbHMvc3RhZmZWaWV3TW9kZWxcIjtcclxuXHJcbi8qKlxyXG4gKiBTaWduVXAgU3RhZmZcclxuICogQHBhcmFtIHJlcVxyXG4gKiBAcGFyYW0gcmVzXHJcbiAqL1xyXG4gZXhwb3J0IGxldCBzdGFmZlNpZ25VcDphbnkgPSBhc3luYyAocmVxOiBSZXF1ZXN0LCByZXM6IFJlc3BvbnNlKSA9PiB7XHJcbiAgIGNvbnNvbGUubG9nKFwiTmV3IFVzZXJcIik7XHJcbiAgIGxldCBuZXdTdGFmZjpTdGFmZlZpZXdNb2RlbCA9IG5ldyBTdGFmZlZpZXdNb2RlbChyZXEuYm9keS5mbmFtZSwgcmVxLmJvZHkubG5hbWUsIHJlcS5ib2R5Lm1uYW1lLCByZXEuYm9keS5yb2xlLCByZXEuYm9keS5zdGFmZklkKTtcclxuICAgbGV0IHN0YWZmU2VydmljZTpTdGFmZlNlcnZpY2UgPSBuZXcgU3RhZmZTZXJ2aWNlKCk7XHJcbiAgIHN0YWZmU2VydmljZS5hZGROZXdTdGFmZihuZXdTdGFmZik7XHJcbn07XHJcbiJdfQ==
+//# sourceMappingURL=staffApiController.js.map

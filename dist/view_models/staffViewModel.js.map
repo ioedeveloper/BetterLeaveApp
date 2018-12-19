@@ -1,0 +1,1 @@
+{"version":3,"file":"staffViewModel.js","sourceRoot":"","sources":["../../view_models/staffViewModel.ts"],"names":[],"mappings":";;AAEA,uCAAuC;AAEvC;;GAEG;AACH;IACI,2CAA2C;IAC3C,wBAAmB,SAAiB,EAAS,QAAgB,EAAS,KAAY,EAAS,QAAe;QAAvF,cAAS,GAAT,SAAS,CAAQ;QAAS,aAAQ,GAAR,QAAQ,CAAQ;QAAS,UAAK,GAAL,KAAK,CAAO;QAAS,aAAQ,GAAR,QAAQ,CAAO;IAE1G,CAAC;IACL,qBAAC;AAAD,CAAC,AALD,IAKC;AALY,wCAAc"}

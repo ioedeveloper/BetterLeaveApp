@@ -50,13 +50,13 @@ var StaffDataService = /** @class */ (function () {
      */
     StaffDataService.prototype.saveNewStaff = function (staff) {
         return __awaiter(this, void 0, void 0, function () {
-            var newstaff;
+            var staff;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this._db.create(staff)];
+                    case 0: return [4 /*yield*/, this._db.save(staff)];
                     case 1:
-                        newstaff = _a.sent();
-                        return [2 /*return*/, newstaff];
+                        staff = _a.sent();
+                        return [2 /*return*/, staff];
                 }
             });
         });
@@ -64,4 +64,4 @@ var StaffDataService = /** @class */ (function () {
     return StaffDataService;
 }());
 exports.StaffDataService = StaffDataService;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RhZmZEYXRhU2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZpY2VzL3N0YWZmRGF0YVNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLHVDQUF1QztBQUN2Qyx5Q0FBc0M7QUFDdEMsbUNBQStFO0FBRy9FOztHQUVHO0FBQ0g7SUFHSTtRQUNJLElBQUksQ0FBQyxHQUFHLEdBQUcsdUJBQWEsRUFBRSxDQUFDLGFBQWEsQ0FBQyxhQUFLLENBQUMsQ0FBQztJQUVwRCxDQUFDO0lBRUQ7O09BRUc7SUFDVSx1Q0FBWSxHQUF6QixVQUEwQixLQUFXOzs7Ozs0QkFFVCxxQkFBTSxJQUFJLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsRUFBQTs7d0JBQTlDLFFBQVEsR0FBVSxTQUE0Qjt3QkFFcEQsc0JBQU8sUUFBUSxFQUFDOzs7O0tBQ25CO0lBQ0wsdUJBQUM7QUFBRCxDQUFDLEFBakJELElBaUJDO0FBakJZLDRDQUFnQiIsInNvdXJjZXNDb250ZW50IjpbIi8vIGltcG9ydGluZyBsaWJyYXJpZXMgYW5kIGRlcGVuZGVuY2llc1xyXG5pbXBvcnQge1N0YWZmfSBmcm9tIFwiLi4vbW9kZWxzL3N0YWZmXCI7XHJcbmltcG9ydCB7IFJlcG9zaXRvcnksIGdldFJlcG9zaXRvcnksIENvbm5lY3Rpb24sIGdldENvbm5lY3Rpb24gfSBmcm9tIFwidHlwZW9ybVwiO1xyXG5pbXBvcnQgeyBSb2xlIH0gZnJvbSBcIi4uL21vZGVscy9Sb2xlXCI7XHJcblxyXG4vKipcclxuICogSGFuZGxlcyBhIHN0YWZmIGRhdGEgYWNjZXNzIG9wZXJhdGlvbnNcclxuICovXHJcbmV4cG9ydCBjbGFzcyBTdGFmZkRhdGFTZXJ2aWNlIHtcclxuICAgIHByaXZhdGUgX2RiOiBSZXBvc2l0b3J5PFN0YWZmPjtcclxuXHJcbiAgICBjb25zdHJ1Y3RvcigpIHtcclxuICAgICAgICB0aGlzLl9kYiA9IGdldENvbm5lY3Rpb24oKS5nZXRSZXBvc2l0b3J5KFN0YWZmKTtcclxuXHJcbiAgICB9XHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBzYXZlTmV3U3RhZmZcclxuICAgICAqL1xyXG4gICAgcHVibGljIGFzeW5jIHNhdmVOZXdTdGFmZihzdGFmZjpTdGFmZik6IFByb21pc2U8U3RhZmY+IHtcclxuXHJcbiAgICAgICAgY29uc3QgbmV3c3RhZmY6IFN0YWZmID0gYXdhaXQgdGhpcy5fZGIuY3JlYXRlKHN0YWZmKTtcclxuXHJcbiAgICAgICAgcmV0dXJuIG5ld3N0YWZmO1xyXG4gICAgfVxyXG59XHJcbiJdfQ==
+//# sourceMappingURL=staffDataService.js.map
