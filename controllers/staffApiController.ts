@@ -1,16 +1,38 @@
 // importing libraries and dependencies
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import { StaffService } from "../services/staffService";
-import { StaffViewModel } from "../view_models/staffViewModel";
-import { Staff } from "../models/staff";
+import * as StaffViewModel  from "../view_models/staffViewModel";
+import {Staff} from "../models/staff";
+import { response } from "../types/api";
 
 /**
  * SignUp Staff
  * @param req
  * @param res
  */
- export let staffSignUp:any = async (req: Request, res: Response) => {
-   let newStaff:StaffViewModel = new StaffViewModel(req.body.fname, req.body.lname, req.body.mname, req.body.role, req.body.staffId);
+let signup:any = async (req: Request, res: Response) => {
+   let data:StaffViewModel.Signup = new StaffViewModel.Signup(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
    let staffService:StaffService = new StaffService();
-   staffService.addNewStaff(newStaff);
+
+   try {
+     let staff:Staff = await staffService.addNewStaff(data);
+     res.status(200).send(staff);
+   } catch(error) {
+      res.status(400).send(error);
+   }
 };
+
+let login:any = async (req: Request, res: Response) => {
+  let data:StaffViewModel.Login = new StaffViewModel.Login(req.body.email, req.body.lastname);
+  let staffService: StaffService = new StaffService();
+
+  try {
+    let staff:Staff = await staffService.login(data);
+    res.status(200).send(staff);
+  } catch(error) {
+    res.status(400).send(error);
+  }
+};
+
+export {signup, login};
+

@@ -1,8 +1,6 @@
 // importing libraries and dependencies
 import {Staff} from "../models/staff";
-import { Repository, getRepository, Connection, getConnection } from "typeorm";
-import { Role } from "../models/Role";
-
+import { Repository, getConnection } from "typeorm";
 /**
  * Handles a staff data access operations
  */
@@ -11,16 +9,13 @@ export class StaffDataService {
 
     constructor() {
         this._db = getConnection().getRepository(Staff);
-
     }
 
     /**
      * saveNewStaff
      */
     public async saveNewStaff(staff:Staff): Promise<Staff> {
-
-        const newstaff: Staff = await this._db.create(staff);
-
-        return newstaff;
+        let newStaff:Staff = await this._db.save(staff);
+        return newStaff;
     }
 }

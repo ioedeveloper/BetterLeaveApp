@@ -1,0 +1,1 @@
+{"version":3,"file":"organisationApiModel.js","sourceRoot":"","sources":["../../api_models/organisationApiModel.ts"],"names":[],"mappings":";;AAEA,uCAAuC;AAEvC;;GAEG;AACH;IACI,8BAAmB,gBAAwB,EAAS,mBAA2B,EAAS,uBAAgC;QAArG,qBAAgB,GAAhB,gBAAgB,CAAQ;QAAS,wBAAmB,GAAnB,mBAAmB,CAAQ;QAAS,4BAAuB,GAAvB,uBAAuB,CAAS;IAExH,CAAC;IACL,2BAAC;AAAD,CAAC,AAJD,IAIC;AAJY,oDAAoB"}
