@@ -1,18 +1,26 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // importing libraries and dependencies
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Handles the shape of the staff from th
  */
-var StaffViewModel = /** @class */ (function () {
+var Signup = /** @class */ (function () {
     // tslint:disable-next-line:max-line-length
-    function StaffViewModel(firstname, lastname, email, password) {
+    function Signup(firstname, lastname, email, password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.password = password;
     }
-    return StaffViewModel;
+    return Signup;
 }());
-exports.StaffViewModel = StaffViewModel;
+exports.Signup = Signup;
+var Login = /** @class */ (function () {
+    function Login(email, password) {
+        this.email = email;
+        this.password = password;
+    }
+    return Login;
+}());
+exports.Login = Login;
 //# sourceMappingURL=staffViewModel.js.map

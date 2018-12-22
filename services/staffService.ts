@@ -1,6 +1,6 @@
 // importing libraries and dependencies
 import { StaffDataService } from "./staffDataService";
-import {StaffViewModel} from "../view_models/staffViewModel";
+import * as StaffViewModel from "../view_models/staffViewModel";
 import {Staff} from "../models/staff";
 import {Role} from "../models/Role";
 
@@ -14,7 +14,7 @@ export class StaffService {
         this._data = new StaffDataService();
     }
 
-    public async addNewStaff(staffData:StaffViewModel): Promise<Staff> {
+    public async addNewStaff(staffData: StaffViewModel.Signup): Promise<Staff> {
         let staff: Staff = new Staff();
         staff.firstname = staffData.firstname;
         staff.lastname = staffData.lastname;

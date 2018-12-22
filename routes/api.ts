@@ -28,6 +28,7 @@ class UserApi {
   }
   private init():void {
     this.router.post("/signup", staffApiController.signup);
+    this.router.post("/login", staffApiController.login);
   }
 }
 

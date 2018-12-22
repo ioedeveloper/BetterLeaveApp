@@ -34,26 +34,68 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var staffService_1 = require("../services/staffService");
-var staffViewModel_1 = require("../view_models/staffViewModel");
+var StaffViewModel = __importStar(require("../view_models/staffViewModel"));
 /**
  * SignUp Staff
  * @param req
  * @param res
  */
-exports.signup = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
-    var newStaff, staffService;
+var signup = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    var data, staffService, staff, error_1;
     return __generator(this, function (_a) {
-        newStaff = new staffViewModel_1.StaffViewModel(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
-        staffService = new staffService_1.StaffService();
-        staffService.addNewStaff(newStaff).then(function (Staff) {
-            res.status(200).send(Staff);
-        }).catch(function (error) {
-            console.log("Error: " + error);
-        });
-        return [2 /*return*/];
+        switch (_a.label) {
+            case 0:
+                data = new StaffViewModel.Signup(req.body.firstname, req.body.lastname, req.body.email, req.body.password);
+                staffService = new staffService_1.StaffService();
+                _a.label = 1;
+            case 1:
+                _a.trys.push([1, 3, , 4]);
+                return [4 /*yield*/, staffService.addNewStaff(data)];
+            case 2:
+                staff = _a.sent();
+                res.status(200).send(staff);
+                return [3 /*break*/, 4];
+            case 3:
+                error_1 = _a.sent();
+                res.status(400).send(error_1);
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
     });
 }); };
+exports.signup = signup;
+var login = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    var data, staffService, staff, error_2;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                data = new StaffViewModel.Login(req.body.email, req.body.lastname);
+                staffService = new staffService_1.StaffService();
+                _a.label = 1;
+            case 1:
+                _a.trys.push([1, 3, , 4]);
+                return [4 /*yield*/, staffService.login(data)];
+            case 2:
+                staff = _a.sent();
+                res.status(200).send(staff);
+                return [3 /*break*/, 4];
+            case 3:
+                error_2 = _a.sent();
+                res.status(400).send(error_2);
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
+    });
+}); };
+exports.login = login;
 //# sourceMappingURL=staffApiController.js.map

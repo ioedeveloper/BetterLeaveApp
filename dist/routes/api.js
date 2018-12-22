@@ -34,6 +34,7 @@ var UserApi = /** @class */ (function () {
     }
     UserApi.prototype.init = function () {
         this.router.post("/signup", staffApiController.signup);
+        this.router.post("/login", staffApiController.login);
     };
     return UserApi;
 }());
